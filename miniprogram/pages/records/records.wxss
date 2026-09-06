@@ -1,0 +1,48 @@
+.record-list {
+  margin-top: 24rpx;
+}
+
+.record-card {
+  position: relative;
+  margin-bottom: 18rpx;
+  padding: 24rpx 128rpx 24rpx 24rpx;
+}
+
+.record-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.record-category {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.record-amount {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.record-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  margin-top: 12rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.delete-button {
+  position: absolute;
+  top: 28rpx;
+  right: 20rpx;
+  width: 88rpx;
+  height: 56rpx;
+  padding: 0;
+  border-radius: 8rpx;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 24rpx;
+  line-height: 56rpx;
+}

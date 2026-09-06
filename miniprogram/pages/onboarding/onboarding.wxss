@@ -1,0 +1,23 @@
+.onboarding-page {
+  padding-top: 60rpx;
+}
+
+.mode-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+}
+
+.mode-option {
+  padding: 28rpx 18rpx;
+  color: #374151;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.mode-option.active {
+  border-color: #0f766e;
+  background: #ecfdf5;
+  color: #0f766e;
+  font-weight: 700;
+}

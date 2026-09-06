@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="header">
+    <text class="title">本月记录</text>
+    <text class="subtitle">按时间倒序显示</text>
+  </view>
+
+  <view wx:if="{{records.length === 0}}" class="empty">本月还没有记录</view>
+
+  <view class="record-list" wx:else>
+    <view wx:for="{{records}}" wx:key="id" class="record-card card">
+      <view class="record-main">
+        <text class="record-category">{{item.category}}</text>
+        <text class="record-amount">{{item.amountText}}</text>
+      </view>
+      <view class="record-sub">
+        <text>{{item.date}}</text>
+        <text>{{item.note}}</text>
+      </view>
+      <button class="delete-button" data-id="{{item.id}}" bindtap="deleteRecord">删除</button>
+    </view>
+  </view>
+</view>

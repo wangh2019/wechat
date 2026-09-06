@@ -1,0 +1,44 @@
+<view class="page dashboard-page" wx:if="{{hasSettings}}">
+  <view class="top-row">
+    <view>
+      <text class="title">本月预算</text>
+      <text class="subtitle">收入分配与剩余额度</text>
+    </view>
+    <button class="add-button" bindtap="goTransaction">+ 记一笔</button>
+  </view>
+
+  <view class="summary-grid">
+    <view class="summary-item card">
+      <text class="summary-label">月收入</text>
+      <text class="summary-value">{{monthlyIncomeText}}</text>
+    </view>
+    <view class="summary-item card">
+      <text class="summary-label">计划储蓄金额</text>
+      <text class="summary-value">{{planSavingsText}}</text>
+    </view>
+    <view class="summary-item card">
+      <text class="summary-label">计划储蓄率</text>
+      <text class="summary-value">{{planSavingsRateText}}</text>
+    </view>
+    <view class="summary-item card">
+      <text class="summary-label">本月已支出</text>
+      <text class="summary-value">{{totalSpentText}}</text>
+    </view>
+  </view>
+
+  <view class="account-list">
+    <view wx:for="{{accounts}}" wx:key="key" class="account-card card">
+      <view class="account-head">
+        <text class="account-name">{{item.name}}</text>
+        <text class="account-left">剩余 {{item.remainingText}}</text>
+      </view>
+      <view class="money-row">
+        <text>预算 {{item.budgetText}}</text>
+        <text>已使用 {{item.usedText}}</text>
+      </view>
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{item.progress}}%;"></view>
+      </view>
+    </view>
+  </view>
+</view>

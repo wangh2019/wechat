@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="header">
+    <text class="title">我的</text>
+    <text class="subtitle">本地设置</text>
+  </view>
+
+  <view class="section">
+    <view class="field">
+      <text class="label">月收入</text>
+      <input class="input" type="digit" value="{{incomeInput}}" bindinput="onIncomeInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">当前储蓄</text>
+      <input class="input" type="digit" value="{{savingsInput}}" bindinput="onSavingsInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">当前预算模式</text>
+      <picker mode="selector" range="{{modeNames}}" value="{{modeIndex}}" bindchange="onModeChange">
+        <view class="picker-value">{{selectedModeName}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <button class="primary-button" bindtap="saveProfile">保存设置</button>
+  <button class="danger-button" bindtap="clearData">清空所有本地数据</button>
+</view>

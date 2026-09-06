@@ -1,0 +1,35 @@
+<view class="page onboarding-page">
+  <view class="header">
+    <text class="title">Life9 / 九格</text>
+    <text class="subtitle">个人预算与生活资源规划</text>
+  </view>
+
+  <view class="section">
+    <view class="field">
+      <text class="label">月到手收入</text>
+      <input class="input" type="digit" placeholder="例如 20000" value="{{incomeInput}}" bindinput="onIncomeInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">当前储蓄</text>
+      <input class="input" type="digit" placeholder="例如 50000" value="{{savingsInput}}" bindinput="onSavingsInput" />
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="label">预算模式</text>
+    <view class="mode-list">
+      <view
+        wx:for="{{modes}}"
+        wx:key="key"
+        class="mode-option card {{item.selectedClass}}"
+        data-mode="{{item.key}}"
+        bindtap="selectMode"
+      >
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <button class="primary-button" bindtap="saveOnboarding">开始使用</button>
+</view>

@@ -1,0 +1,96 @@
+.dashboard-page {
+  padding-bottom: 40rpx;
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.add-button {
+  flex: 0 0 auto;
+  height: 72rpx;
+  min-width: 176rpx;
+  margin: 0;
+  border-radius: 8rpx;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 26rpx;
+  line-height: 72rpx;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+
+.summary-item {
+  min-height: 128rpx;
+  padding: 22rpx;
+}
+
+.summary-label {
+  display: block;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.summary-value {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.account-list {
+  margin-top: 24rpx;
+}
+
+.account-card {
+  margin-bottom: 18rpx;
+  padding: 24rpx;
+}
+
+.account-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.account-name {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.account-left {
+  color: #0f766e;
+  font-size: 24rpx;
+}
+
+.money-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin-top: 18rpx;
+  color: #4b5563;
+  font-size: 24rpx;
+}
+
+.progress-track {
+  height: 14rpx;
+  margin-top: 18rpx;
+  overflow: hidden;
+  border-radius: 999rpx;
+  background: #e5e7eb;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: #0f766e;
+}
