@@ -8,8 +8,11 @@ function formatAccounts(accounts) {
     name: account.name,
     budgetText: formatCurrency(account.budgetCents),
     usedText: formatCurrency(account.usedCents),
-    remainingText: formatCurrency(account.remainingCents),
-    progress: account.progress
+    remainingText: account.isOverBudget
+      ? `超支 ${formatCurrency(Math.abs(account.remainingCents))}`
+      : `剩余 ${formatCurrency(account.remainingCents)}`,
+    progress: account.progress,
+    statusClass: account.isOverBudget ? "over" : ""
   }));
 }
 

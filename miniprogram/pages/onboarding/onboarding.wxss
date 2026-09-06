@@ -3,12 +3,15 @@
 }
 
 .mode-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -18rpx;
 }
 
 .mode-option {
+  flex: 1 1 280rpx;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
   padding: 28rpx 18rpx;
   color: #374151;
   font-size: 28rpx;

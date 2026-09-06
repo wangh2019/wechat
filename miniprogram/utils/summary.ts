@@ -38,6 +38,7 @@ export function buildDashboard(settings, transactions) {
       const progress = account.budgetCents > 0
         ? Math.min(100, Math.round((usedCents / account.budgetCents) * 100))
         : 0;
+      const isOverBudget = remainingCents < 0;
 
       return {
         key: account.key,
@@ -45,7 +46,8 @@ export function buildDashboard(settings, transactions) {
         budgetCents: account.budgetCents,
         usedCents,
         remainingCents,
-        progress
+        progress,
+        isOverBudget
       };
     })
   };

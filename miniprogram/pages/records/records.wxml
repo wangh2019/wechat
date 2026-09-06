@@ -4,7 +4,11 @@
     <text class="subtitle">按时间倒序显示</text>
   </view>
 
-  <view wx:if="{{records.length === 0}}" class="empty">本月还没有记录</view>
+  <view wx:if="{{records.length === 0}}" class="empty-state">
+    <text class="empty-title">本月还没有记录</text>
+    <text class="empty-desc">今天开始记录本月支出。</text>
+    <button class="primary-button" bindtap="goTransaction">+ 记一笔</button>
+  </view>
 
   <view class="record-list" wx:else>
     <view wx:for="{{records}}" wx:key="id" class="record-card card">

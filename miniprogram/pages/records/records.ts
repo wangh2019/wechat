@@ -45,5 +45,9 @@ Page({
         }
       }
     });
+  },
+
+  goTransaction() {
+    wx.navigateTo({ url: "/pages/transaction/transaction" });
   }
 });

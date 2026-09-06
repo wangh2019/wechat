@@ -7,7 +7,7 @@
     <button class="add-button" bindtap="goTransaction">+ 记一笔</button>
   </view>
 
-  <view class="summary-grid">
+  <view class="summary-list">
     <view class="summary-item card">
       <text class="summary-label">月收入</text>
       <text class="summary-value">{{monthlyIncomeText}}</text>
@@ -27,17 +27,17 @@
   </view>
 
   <view class="account-list">
-    <view wx:for="{{accounts}}" wx:key="key" class="account-card card">
+    <view wx:for="{{accounts}}" wx:key="key" class="account-card card {{item.statusClass}}">
       <view class="account-head">
         <text class="account-name">{{item.name}}</text>
-        <text class="account-left">剩余 {{item.remainingText}}</text>
+        <text class="account-left">{{item.remainingText}}</text>
       </view>
       <view class="money-row">
         <text>预算 {{item.budgetText}}</text>
         <text>已使用 {{item.usedText}}</text>
       </view>
       <view class="progress-track">
-        <view class="progress-fill" style="width: {{item.progress}}%;"></view>
+        <view class="progress-fill {{item.statusClass}}" style="width: {{item.progress}}%;"></view>
       </view>
     </view>
   </view>

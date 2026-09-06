@@ -16,6 +16,7 @@ page {
   font-size: 42rpx;
   font-weight: 700;
   line-height: 1.25;
+  letter-spacing: 0;
 }
 
 .subtitle {
@@ -23,6 +24,7 @@ page {
   margin-top: 10rpx;
   color: #6b7280;
   font-size: 26rpx;
+  line-height: 1.45;
 }
 
 .section {
@@ -92,4 +94,8 @@ page {
   border: 1rpx solid #e5e7eb;
   border-radius: 8rpx;
   background: #ffffff;
+}
+
+.muted {
+  color: #6b7280;
 }

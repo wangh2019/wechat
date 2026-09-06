@@ -1,3 +1,23 @@
+.empty-state {
+  margin-top: 72rpx;
+  text-align: center;
+}
+
+.empty-title {
+  display: block;
+  color: #111827;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.empty-desc {
+  display: block;
+  margin-top: 14rpx;
+  color: #6b7280;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
 .record-list {
   margin-top: 24rpx;
 }
@@ -11,7 +31,6 @@
 .record-main {
   display: flex;
   justify-content: space-between;
-  gap: 20rpx;
 }
 
 .record-category {
@@ -20,17 +39,22 @@
 }
 
 .record-amount {
+  margin-left: 20rpx;
   font-size: 30rpx;
   font-weight: 700;
+  text-align: right;
 }
 
 .record-sub {
   display: flex;
   flex-direction: column;
-  gap: 8rpx;
   margin-top: 12rpx;
   color: #6b7280;
   font-size: 24rpx;
+}
+
+.record-sub text + text {
+  margin-top: 8rpx;
 }
 
 .delete-button {
