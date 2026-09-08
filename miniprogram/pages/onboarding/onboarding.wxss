@@ -1,0 +1,26 @@
+.onboarding-page {
+  padding-top: 60rpx;
+}
+
+.mode-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -18rpx;
+}
+
+.mode-option {
+  flex: 1 1 280rpx;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  padding: 28rpx 18rpx;
+  color: #374151;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.mode-option.active {
+  border-color: #0f766e;
+  background: #ecfdf5;
+  color: #0f766e;
+  font-weight: 700;
+}

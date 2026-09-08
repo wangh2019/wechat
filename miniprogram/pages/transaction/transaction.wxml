@@ -1,0 +1,34 @@
+<view class="page">
+  <view class="header">
+    <text class="title">记一笔</text>
+    <text class="subtitle">记录本月支出</text>
+  </view>
+
+  <view class="section">
+    <view class="field">
+      <text class="label">金额</text>
+      <input class="input" type="digit" placeholder="例如 129.90" value="{{amountInput}}" bindinput="onAmountInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">类别</text>
+      <picker mode="selector" range="{{accountNames}}" value="{{accountIndex}}" bindchange="onAccountChange">
+        <view class="picker-value">{{selectedAccountName}}</view>
+      </picker>
+    </view>
+
+    <view class="field">
+      <text class="label">备注</text>
+      <textarea class="textarea" maxlength="80" placeholder="可选" value="{{note}}" bindinput="onNoteInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">日期</text>
+      <picker mode="date" value="{{date}}" bindchange="onDateChange">
+        <view class="picker-value">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <button class="primary-button" bindtap="saveTransaction">保存</button>
+</view>

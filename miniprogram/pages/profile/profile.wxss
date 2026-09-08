@@ -1,0 +1,9 @@
+.picker-value {
+  box-sizing: border-box;
+  min-height: 88rpx;
+  padding: 22rpx 24rpx;
+  border: 1rpx solid #d1d5db;
+  border-radius: 8rpx;
+  background: #ffffff;
+  font-size: 30rpx;
+}
